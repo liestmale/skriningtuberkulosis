@@ -12,7 +12,7 @@
       background-size: cover;
     }
 
-        header {
+    header {
       background: linear-gradient(to right, #dceeff, #f1f6ff);
       display: flex;
       align-items: center;
@@ -32,16 +32,17 @@
       width: 60px;
     }
 
-    nav {
+    .menu-container {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       gap: 10px;
-      padding: 10px;
       background-color: #ffffff;
+      padding: 10px;
     }
 
-    nav button {
+    .menu-container button {
       background-color: #0057d8;
       color: white;
       border: none;
@@ -50,27 +51,7 @@
       cursor: pointer;
     }
 
-    aside {
-      position: fixed;
-      top: 120px;
-      left: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    aside button {
-      background-color: #0057d8;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 20px;
-      cursor: pointer;
-      width: 160px;
-    }
-
     main {
-      margin-left: 190px;
       padding: 20px;
     }
 
@@ -104,8 +85,7 @@
     }
 
     .cta-button:hover,
-    nav button:hover,
-    aside button:hover {
+    .menu-container button:hover {
       background-color: #003fa3;
       transition: background-color 0.3s ease;
     }
@@ -118,16 +98,8 @@
     }
 
     @media screen and (max-width: 768px) {
-      aside {
-        position: static;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 10px 0;
-      }
-
-      main {
-        margin-left: 0;
+      .menu-container {
+        flex-direction: column;
       }
     }
   </style>
@@ -141,7 +113,9 @@
     <img src="Eliminasi TB di Tempat Kerja.png" alt="Logo Eliminasi TBC" class="logo">
   </header>
 
-  <nav>
+  <!-- Menu gabungan nav + aside -->
+  <div class="menu-container">
+    <!-- Menu nav -->
     <button>Beranda</button>
     <button>Promosi</button>
     <button>Edukasi</button>
@@ -149,30 +123,8 @@
     <button>Pelaporan</button>
     <button>Statistik & Kasus</button>
     <button>Hubungi</button>
-  </nav>
-
-  <aside>
+    
+    <!-- Menu aside -->
     <button>Cari...</button>
     <button>Tempat Kerja</button>
-    <button>Tenaga Kerja</button>
-    <button>Mitra Kerja</button>
-    <button>FAQ</button>
-    <button>Pengaduan</button>
-  </aside>
-
-  <main>
-    <div class="content">
-      <h2>
-        "Ayo Skrining TBC Sekarang!<br>
-        Lindungi Diri, Keluarga, dan Rekan Kerja Anda."<br>
-        Cegah Lebih Baik dari Mengobati – Mudah dan Gratis.
-      </h2>
-      <a class="cta-button" href="#">Mulai Skrining yuk</a>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Kementerian Ketenagakerjaan</p>
-  </footer>
-</body>
-</html>
+    <button>
