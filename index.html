@@ -1,26 +1,188 @@
-aside {
-  position: fixed;
-  top: 120px;
-  left: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 10; /* pastikan muncul di atas background */
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eliminasi TB di Tempat Kerja</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('Eliminasi-TB-BG-Bersih.png') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-.aside-btn {
-  background-color: rgba(0, 87, 216, 0.9); /* transparan sedikit */
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  width: 160px;
-  font-weight: bold;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* opsional untuk pop-up efek */
-  transition: background-color 0.3s ease;
-}
+    header {
+      background: linear-gradient(to right, #dceeff, #f1f6ff);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
 
-.aside-btn:hover {
-  background-color: rgba(0, 63, 163, 0.95);
-}
+    header h1 {
+      flex: 1;
+      text-align: center;
+      font-size: 22px;
+      color: #003366;
+      margin: 0;
+    }
+
+    .logo {
+      width: 60px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 10px;
+      background-color: #ffffff;
+    }
+
+    nav button {
+      background-color: #0057d8;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    nav button:hover {
+      background-color: #003fa3;
+      transition: background-color 0.3s ease;
+    }
+
+    aside {
+      position: fixed;
+      top: 120px;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .aside-btn {
+      background-color: rgba(0, 87, 216, 0.9);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 160px;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .aside-btn:hover {
+      background-color: rgba(0, 63, 163, 0.95);
+    }
+
+    main {
+      margin-left: 190px;
+      padding: 20px;
+    }
+
+    .content {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 40px 30px;
+      border-radius: 10px;
+      min-height: 350px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .content h2 {
+      font-size: 22px;
+      color: #003366;
+      font-weight: bold;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+
+    .cta-button {
+      background-color: #0057d8;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .cta-button:hover {
+      background-color: #003fa3;
+      transition: background-color 0.3s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    @media screen and (max-width: 768px) {
+      aside {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px 0;
+      }
+
+      main {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Kemnaker Logo.png" alt="Logo Kementerian Ketenagakerjaan" class="logo">
+    <h1>ELIMINASI TB DI TEMPAT KERJA</h1>
+    <img src="Eliminasi TB di Tempat Kerja.png" alt="Logo Eliminasi TBC" class="logo">
+  </header>
+
+  <nav>
+    <button>Beranda</button>
+    <button>Promosi</button>
+    <button>Edukasi</button>
+    <button>Regulasi</button>
+    <button>Pelaporan</button>
+    <button>Statistik & Kasus</button>
+    <button>Hubungi</button>
+  </nav>
+
+  <aside>
+    <button class="aside-btn">Cari...</button>
+    <button class="aside-btn">Tempat Kerja</button>
+    <button class="aside-btn">Tenaga Kerja</button>
+    <button class="aside-btn">Mitra Kerja</button>
+    <button class="aside-btn">FAQ</button>
+    <button class="aside-btn">Pengaduan</button>
+  </aside>
+
+  <main>
+    <div class="content">
+      <h2>
+        "Ayo Skrining TBC Sekarang!<br>
+        Lindungi Diri, Keluarga, dan Rekan Kerja Anda."<br>
+        Cegah Lebih Baik dari Mengobati – Mudah dan Gratis.
+      </h2>
+      <a class="cta-button" href="#">Mulai Skrining yuk</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kementerian Ketenagakerjaan</p>
+  </footer>
+</body>
+</html>
